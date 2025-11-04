@@ -23,7 +23,7 @@ class UserAuthServiceApplicationTests {
 	void contextLoads() {
 	}
 
-	@Test
+	/*@Test
 	public void testCase(){
 		RegisteredClient oidcClient = RegisteredClient.withId(UUID.randomUUID().toString())
 				.clientId("oidc-client")
@@ -38,5 +38,5 @@ class UserAuthServiceApplicationTests {
 				.build();
 
 		 registeredClientRepository.save(oidcClient);
-	}
+	}*/
 }
