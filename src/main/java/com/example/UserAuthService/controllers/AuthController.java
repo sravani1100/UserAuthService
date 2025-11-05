@@ -7,9 +7,6 @@ import com.example.UserAuthService.models.Token;
 import com.example.UserAuthService.models.User;
 import com.example.UserAuthService.services.IAuthService;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import lombok.Getter;
-import org.antlr.v4.runtime.misc.Pair;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -41,6 +38,9 @@ public class AuthController {
     @GetMapping("/validate/{tokenValue}")
     public UserDto validateToken(@PathVariable String tokenValue){
         User user = authService.validateToken(tokenValue);
+
+        System.out.println("Validating token........");
+
         return from(user);
     }
 
